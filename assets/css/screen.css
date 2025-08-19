@@ -2058,8 +2058,8 @@ Search                         LOGO                    Login Subscribe
 }
 
 .gh-article-image {
-    grid-column: wide;
-    margin-top: 40px;
+    grid-column: main; /* was wide */
+    margin-top: 24px; /* as 40px */
 }
 
 .gh-article-image img {
@@ -2505,7 +2505,7 @@ figcaption a {
     display: grid;
     grid-template-columns: repeat(16, 1fr);
     gap: var(--grid-gap);
-    margin-block: 80px 24px;
+    margin-block: 20px 24px;
 }
 
 .gh-archive.has-image {
@@ -2517,7 +2517,7 @@ figcaption a {
     grid-template-columns: 1fr 1fr;
     gap: var(--grid-gap);
     grid-column: 1 / -1;
-    padding-bottom: clamp(40px, 2.73vw + 29.09px, 64px);
+    padding-bottom: clamp(20px, 2.73vw + 29.09px, 20px);
     border-bottom: 1px solid var(--color-border);
 }
 
