@@ -1967,7 +1967,7 @@ Search                         LOGO                    Login Subscribe
 }
 
 .gh-article-header {
-    margin: clamp(40px, 3.64vw + 25.45px, 72px) 0 40px;
+    margin: clamp(20px, 3.64vw + 25.45px, 20px) 0 30px;
 }
 
 .gh-article-tag {
