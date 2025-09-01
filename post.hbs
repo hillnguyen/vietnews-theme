@@ -12,11 +12,18 @@
             {{#if primary_tag}}
                 <a class="gh-article-tag" href="{{primary_tag.url}}">{{primary_tag.name}}</a>
             {{/if}}
+            <!--
             <h1 class="gh-article-title is-title">{{title}}</h1>
             {{#if custom_excerpt}}
                 <p class="gh-article-excerpt is-body">{{custom_excerpt}}</p>
             {{/if}}
-
+            -->
+             <h1 class="gh-article-title is-title">
+                <span class="lang-title" data-lang="en">{{title}}</span>
+                {{#if custom_excerpt}}
+                    <span class="lang-title" data-lang="vi">{{custom_excerpt}}</span>
+                {{/if}}                
+             </h1>
             {{#if @custom.show_post_metadata}}
             <div class="gh-article-meta">
                 <!--<div class="gh-article-author-image instapaper_ignore">
