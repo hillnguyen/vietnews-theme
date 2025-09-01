@@ -3331,3 +3331,32 @@ body[class*=" gh-font-heading"]:not(.gh-font-heading-fira-sans):not(.gh-font-hea
 .pswp--minimal--dark .pswp__top-bar {
     background: none;
 }
+
+/* --- Bilingual (marker headings) --- */
+
+/* Switcher hidden by default; JS decides when to show */
+.lang-toggle { display: none; gap: .5rem; margin: .75rem 0 0; }
+.lang-btn { padding: .35rem .6rem; border: 1px solid currentColor; border-radius: 6px; background: transparent; cursor: pointer; }
+.lang-btn[aria-pressed="true"] { outline: 2px solid currentColor; }
+
+/* Title swap */
+.lang-title { display: none; }
+.lang-title.is-active { display: inline; }
+
+/* Content chunks (applied by JS) */
+.lang-chunk { display: none; }
+.lang-chunk.is-active { display: block; }
+
+/* Hide the marker headings on web once JS grouped content */
+.lang-marker { display: none; }
+
+/* No‑JS / email fallback: show everything */
+html.no-js .lang-marker,
+html.no-js .lang-chunk { display: block; }
+
+/* Print: show both languages */
+@media print {
+  .lang-title { display: inline !important; }
+  .lang-marker, .lang-chunk { display: block !important; }
+}
+
