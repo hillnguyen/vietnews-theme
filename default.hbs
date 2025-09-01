@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="{{@site.locale}}">
+<html class = "no-js" lang="{{@site.locale}}">
 <head>
 
     {{!-- Basic meta - advanced meta is output with {{ghost_head}} below --}}
@@ -65,6 +65,8 @@
 
 {{!-- Scripts - handle responsive videos, infinite scroll, and navigation dropdowns --}}
 <script src="{{asset "built/source.js"}}"></script>
+
+<script src="{{asset "js/lang-toggle.js"}}"></script>
 
 {{!-- Ghost outputs required functional scripts with this tag, it should always be the last thing before the closing body tag --}}
 {{ghost_foot}}
