@@ -5,8 +5,8 @@
     //mapping header text -> language code (strict)
     function mapLang(text) {
         const t = (text || '').trim().toLowerCase();
-        if (t === '__english_section') return 'en';
-        if (t === '__vietnamese_section') return 'vi';
+        if (t === '__english') return 'en';
+        if (t === '__vietnamese') return 'vi';
         return null;
     }
 
