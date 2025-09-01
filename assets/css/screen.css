@@ -3335,13 +3335,20 @@ body[class*=" gh-font-heading"]:not(.gh-font-heading-fira-sans):not(.gh-font-hea
 /* --- Bilingual (marker headings) --- */
 
 /* Switcher hidden by default; JS decides when to show */
-.lang-toggle { display: none; gap: .5rem; margin: .75rem 0 0; }
+.lang-toggle { display: inline-flex; gap: .5rem; margin: .75rem 0 0; }
+.lang-toggle[hidden] { display: none !important;} /* js controll this */
 .lang-btn { padding: .35rem .6rem; border: 1px solid currentColor; border-radius: 6px; background: transparent; cursor: pointer; }
 .lang-btn[aria-pressed="true"] { outline: 2px solid currentColor; }
 
 /* Title swap */
+/*
 .lang-title { display: none; }
 .lang-title.is-active { display: inline; }
+*/
+.lang-title { display: inline;}
+/* only if JS detects bilanguagual titles */
+.js-bilingual-title .lang-title { display: none;}
+.js-bilingual-title .lang-title.is-active { display: inline;}
 
 /* Content chunks (applied by JS) */
 .lang-chunk { display: none; }

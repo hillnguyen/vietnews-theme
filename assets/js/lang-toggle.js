@@ -48,7 +48,17 @@
   const hasBilingualTitle = titleSpans.length >= 2;
 
   // If neither body nor title is bilingual, do nothing
-  if (!hasBilingualBody && !hasBilingualTitle) return;
+  // if (!hasBilingualBody && !hasBilingualTitle) return;
+  // If neither the body nor the title is bilingual, make sure a title is shown and exit
+    if (!hasBilingualBody && !hasBilingualTitle) {
+        if (titleSpans[0]) titleSpans[0].classList.add('is-active');  // show EN span
+    return;
+    }
+
+    // Tell CSS we can toggle titles
+    if (hasBilingualTitle) {
+        document.body.classList.add('js-bilingual-title');
+    }
 
   // 5) Show/hide switcher based on body bilingual
   const switcher = document.querySelector('.lang-toggle');
