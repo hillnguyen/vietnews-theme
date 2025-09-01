@@ -24,6 +24,11 @@
                     <span class="lang-title" data-lang="vi">{{custom_excerpt}}</span>
                 {{/if}}                
              </h1>
+             <div class="lang-toggle" role="group" aria-label="Language toggle" hidden>
+                <button class="lang-btn" data-set-lang="en" aria-pressed="false">English</button>
+                <button class="lang-btn" data-set-lang="vi" aria-pressed="false">Tiếng Việt</button>
+            </div>
+
             {{#if @custom.show_post_metadata}}
             <div class="gh-article-meta">
                 <!--<div class="gh-article-author-image instapaper_ignore">
