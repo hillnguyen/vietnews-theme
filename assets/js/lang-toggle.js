@@ -16,7 +16,7 @@
 
     //1. find marker headings, we mark as h2
     const markers = [];
-    root.querySelectorAll9('h2').forEach(h => {
+    root.querySelectorAll('h2').forEach(h => {
         const lang = mapLang(h.textContent);
         if (lang) markers.push({el: h, lang});
     });
