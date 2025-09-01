@@ -3367,3 +3367,75 @@ html.no-js .lang-chunk { display: block; }
   .lang-marker, .lang-chunk { display: block !important; }
 }
 
+/* === Bilingual toggle styles === */
+.lang-toggle {
+  display: inline-flex;
+  gap: 0.8rem;
+  margin: 1rem 0 0;
+  font-family: inherit;
+}
+
+.lang-btn {
+  font-size: 1rem;
+  padding: 0.4rem 0.9rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background: transparent;
+  cursor: pointer;
+  color: inherit;
+  transition: all 0.2s ease;
+}
+
+.lang-btn:hover {
+  border-color: #00ff88;
+  color: #007bff;
+  background-color: rgba(0, 123, 255, 0.08);
+}
+
+.lang-btn[aria-pressed="true"] {
+  border-color: #007bff;
+  color: #fff;
+  background-color: #007bff;
+  font-weight: 600;
+}
+
+
+/* === Custom layout adjustments === */
+
+/* Widen the main reading column on single Post + Page */
+.post-template .gh-canvas,
+.page-template .gh-canvas {
+  --content-width: 860px;  /* try 820–900px to taste (default ≈720px) */
+}
+
+/* Give the article area a bit more breathing room */
+.post-template .gh-article,
+.page-template .gh-article {
+  --container-width: 1280px;
+}
+
+/* Make the featured image match content width */
+.post-template .gh-article-image,
+.page-template .gh-article-image {
+  grid-column: main;
+}
+
+/* Tiny bump to body text on articles */
+.post-template .gh-content,
+.page-template .gh-content {
+  --content-font-size: 1.8rem;
+}
+
+/* Hide ONLY the tag page banner image */
+.tag-template .gh-archive-inner > .gh-article-image {
+  display: none !important;
+}
+
+/* Remove extra spacing when tag pages have image flag */
+.tag-template .gh-archive.has-image {
+  padding-top: 0 !important;
+  margin-top: 0 !important;
+}
+
+
+
